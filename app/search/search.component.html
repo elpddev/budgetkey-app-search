@@ -15,15 +15,15 @@
       <ul class="row">
         <li class="active col-xs-3 col-md-2">
           <a href="#" (click)="resultTotal ? displayDocs  = 'all' : ''"
-              [class]= "displayDocs  === 'all' ? 'activeclass'  : ''" >הכל 
+              [class]= "displayDocs  === 'all' ? 'activeclass'  : ''" >הכל
             <span>
                 ({{resultTotal ? resultTotal.toLocaleString()  : '0'}})
             </span>
           </a>
         </li>
         <li class="active col-xs-3 col-md-2">
-          <a href="#" (click)="resultTotalCount.budget ? displayDocs  = 'budget' : '' " 
-            [class]= "displayDocs  === 'budget' ? 'activeclass'  : ''">סעיף תקציבי 
+          <a href="#" (click)="resultTotalCount.budget ? displayDocs  = 'budget' : '' "
+            [class]= "displayDocs  === 'budget' ? 'activeclass'  : ''">סעיף תקציבי
             <span>
                 ({{resultTotalCount.budget ? resultTotalCount.budget.toLocaleString()  : '0'}})
             </span>
@@ -31,23 +31,23 @@
         </li>
         <li class="active col-xs-3 col-md-2">
           <a href="#" (click)="resultTotalCount.entities ? displayDocs  = 'entities'  : '' "
-            [class]= "displayDocs  === 'entities' ? 'activeclass'  : ''">ארגון 
+            [class]= "displayDocs  === 'entities' ? 'activeclass'  : ''">ארגון
             <span>
                 ({{resultTotalCount.entities ? resultTotalCount.entities.toLocaleString()  : '0'}})
             </span>
           </a>
         </li>
         <li class="active col-xs-3 col-md-2">
-          <a href="#" (click)="resultTotalCount.changes ?  displayDocs  = 'changes' : ''"
-            [class]= "displayDocs  === 'changes' ? 'activeclass'  : ''" >העברה תקציבית  
+          <a href="#" (click)="resultTotalCount['nationalbudget-changes'] ?  displayDocs  = 'nationalbudget-changes' : ''"
+            [class]= "displayDocs  === 'changes' ? 'activeclass'  : ''" >העברה תקציבית
             <span>
-                ({{resultTotalCount.changes ? resultTotalCount.changes.toLocaleString()  : '0'}})
+                ({{resultTotalCount['nationalbudget-changes'] ? resultTotalCount['nationalbudget-changes'].toLocaleString()  : '0'}})
             </span>
           </a>
         </li>
         <li class="active col-xs-3 col-md-2">
-          <a href="#" (click)= "resultTotalCount.supports ? displayDocs  = 'supports' : ''" 
-            [class]= "displayDocs  === 'supports' ? 'activeclass'  : ''">תמיכה ממשלתית 
+          <a href="#" (click)= "resultTotalCount.supports ? displayDocs  = 'supports' : ''"
+            [class]= "displayDocs  === 'supports' ? 'activeclass'  : ''">תמיכה ממשלתית
             <span>
                 ({{resultTotalCount.supports ? resultTotalCount.supports.toLocaleString()  : '0'}})
             </span>
@@ -55,7 +55,7 @@
         </li>
         <li class="active col-xs-3 col-md-2">
           <a href="#"  (click)="resultTotalCount.contractspending ? displayDocs  = 'contractspending' : '' "
-            [class]= "displayDocs  === 'contractspending' ? 'activeclass'  : ''">רכש 
+            [class]= "displayDocs  === 'contractspending' ? 'activeclass'  : ''">רכש
             <span>
                 ({{resultTotalCount.contractspending ? resultTotalCount.contractspending.toLocaleString()  : '0'}})
             </span>
@@ -76,8 +76,10 @@
           <search-result-budget [item]="item"></search-result-budget>
       </div>
     </div>
-    <div *ngIf="item.type == 'changes' && (displayDocs === 'changes' || displayDocs  === 'all')">
-          <search-result-changes [item]="item"></search-result-changes>
+    <div *ngIf="item.type == 'nationalbudget-changes'">
+      <div *ngIf="displayDocs === 'nationalbudget-changes' || displayDocs  === 'all'">
+        <search-result-changes [item]="item"></search-result-changes>
+      </div>
     </div>
     <div *ngIf="item.type == 'supports' && (displayDocs === 'supports' || displayDocs  === 'all')">
         <search-result-supports [item]="item"></search-result-supports>

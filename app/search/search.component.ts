@@ -30,7 +30,7 @@ export class SearchComponent implements OnInit {
   private pageSize: number; // how many records to load for each scroll
   private skip: number;  // how many records to skip from recently fetched query (when appending to the list)
   private fetchFlag: boolean ;
-  private resultRenew: boolean ; // 
+  private resultRenew: boolean ; //
   private headerBottomBorder: boolean;
 
   constructor(private searchService: SearchService) {}
@@ -41,6 +41,7 @@ export class SearchComponent implements OnInit {
     this.allResults  = new Array;
     this.resultTotal = 0;
     this.resultTotalCount   = new SearchResultsCounter();
+    console.log("&&&&&&&&&&&&&&&&&&& this.resultTotalCount", this.resultTotalCount);
     this.resultCurrentCount = new SearchResultsCounter();
     this.displayDocs = 'all';
     this.currentDocs = 'all';
@@ -83,7 +84,7 @@ export class SearchComponent implements OnInit {
     } else {
       this.resultRenew = false;
       this.term = term;
-      this.searchTerms.next(term); 
+      this.searchTerms.next(term);
     }
   }
   /**
@@ -177,7 +178,7 @@ export class SearchComponent implements OnInit {
   /**
    * fetchMore()
    * when scrolling, appends more results to the list
-   * @param {number} term 
+   * @param {number} term
    */
   fetchMore(term: number): void {
     const div = document.body.getElementsByClassName('search_body')[0];
