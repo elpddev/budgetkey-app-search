@@ -11,7 +11,7 @@ import { SearchService } from './_service/search.service';
 import { SearchComponent } from './search/search.component';
 
 import { BudgetKeyCommonModule } from 'budgetkey-ng2-components';
-import { SearchResultBudgetComponent } from './search_result/search_result.component';
+import { SearchResultBudgetComponent } from './search-result-budget/search-result-budget.component';
 import { SearchResultChangesComponent } from './search_result/search_result.component';
 import { SearchResultExemptionComponent } from './search_result/search_result.component';
 import { SearchResultProcurementComponent } from './search_result/search_result.component';
