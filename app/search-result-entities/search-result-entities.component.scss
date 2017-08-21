@@ -1,0 +1,130 @@
+$theme-olive-green: #A9CC8B;
+$theme-olive-green-light: #D1DFC4;
+
+#main {
+  position: relative;
+  height: 150px; // todo: for debug
+  width: 650px; // todo: for debug
+	margin: 15px 0; // todo: for debug
+  direction: ltr;
+
+  #folder-background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 92%;
+
+    #layer1 {
+      position: absolute;
+      top: -4px;
+      left: 4px;
+      width: 100%;
+      height: 100%;
+
+      background-color: white;
+      border: 1px solid lightgray;
+    }
+
+    #layer2 {
+      position: absolute;
+      top: -2px;
+      left: 2px;
+      width: 100%;
+      height: 100%;
+
+      background-color: white;
+      border: 1px solid lightgray;
+    }
+
+    #layer3 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      background-color: white;
+      border: 1px solid lightgray;
+    }
+  }
+
+  #folder {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+
+    #folder-header {
+      position: relative;
+			top: 2px;
+			z-index: 3;
+
+      height: 40px; // todo: for debug
+      width: 450px; // todo: for debug
+
+      display: flex;
+      flex-flow: row nowrap;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      align-items: stretch;
+
+      #header-main-part {
+        flex: 5 0 0;
+
+        background-color: $theme-olive-green-light;
+        border-top: 1px solid;
+        border-right: 1px solid;
+        border-color: $theme-olive-green;
+      }
+
+      #header-point {
+				flex: 0 0 33px;
+        position: relative;
+        overflow: hidden;
+
+				#header-point-filler-part {
+					background-color: #d1dfc4;
+					width: 100px;
+					height: 100px;
+					position: absolute;
+					transform: rotate(34deg) translate(8px,0px);
+					border-left: 1px solid #a9cc8b;
+				}
+      }
+    }
+
+    #folder-body {
+      position: relative;
+      height: 400px; // todo: for debug
+      align-self: stretch;
+      flex: 1 0 0;
+
+      #folder-body-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: $theme-olive-green-light;
+        border: 1px solid $theme-olive-green;
+        border-radius: 3px;
+      }
+
+      #folder-body-content {
+        position: absolute;
+        width: 100%;
+        height: 95%;
+        background: $theme-olive-green-light;
+        border: 1px solid $theme-olive-green;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+
+    }
+  }
+}

@@ -5,6 +5,8 @@ import { DocResultEntry } from '../_model/SearchResults';
 @Component({
   selector: 'search-result-entities',
   template: require('./search-result-entities.component.html'),
+  //styleUrls: ['/app/search-result-entities/search-result-entities.component.css']
+  styles: [require('./search-result-entities.component.scss')]
 })
 export class SearchResultEntitiesComponent implements OnInit {
   @Input() item: DocResultEntry;
