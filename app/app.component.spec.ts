@@ -16,7 +16,7 @@ import { SearchResultChangesComponent } from './search_result/search_result.comp
 import { SearchResultExemptionComponent } from './search_result/search_result.component';
 import { SearchResultProcurementComponent } from './search_result/search_result.component';
 import { SearchResultSupportsComponent } from './search_result/search_result.component';
-import { SearchResultEntitiesComponent } from './search_result/search_result.component';
+import { SearchResultEntitiesComponent } from './search-result-entities/search-result-entities.component';
 import { SearchResultPeopleComponent } from './search_result/search_result.component';
 
 import { Highlighter } from './highlighter/search.highlighter';
